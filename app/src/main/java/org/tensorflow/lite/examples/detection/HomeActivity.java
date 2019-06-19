@@ -29,7 +29,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(HomeActivity.this, DetectorActivity.class);
             startActivity(intent);
         }
-
+     else if(v == mUploadButton){
+         Intent intent= new Intent(HomeActivity.this, GoogleVision.class);
+         startActivity(intent);
+        }
 
     }
 }

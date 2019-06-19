@@ -11,6 +11,14 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_KEY',API_KEY
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,6 +32,7 @@ android {
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }
+
 }
 
 // import DownloadModels task
@@ -46,14 +55,9 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    // Google Cloud Vision API
-    implementation 'com.google.android.gms:play-services-base:17.0.0'
-    implementation 'com.google.android.gms:play-services-auth:17.0.0'
-    implementation 'com.google.apis:google-api-services-vision:v1-rev16-1.22.0'
-    implementation ('com.google.api-client:google-api-client-android:1.22.0') {
-        exclude module: 'httpclient'
-    }
-    implementation ('com.google.http-client:google-http-client-gson:1.20.0') {
-        exclude module: 'httpclient'
-    }
+     //google vision api
+    implementation 'com.google.api-client:google-api-client-android:1.20.0' exclude module: 'httpclient'
+    implementation 'com.google.http-client:google-http-client-gson:1.20.0' exclude module: 'httpclient'
+    implementation 'com.google.apis:google-api-services-vision:v1-rev2-1.21.0' exclude module: 'httpclient'
+
 }
