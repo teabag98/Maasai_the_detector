@@ -26,7 +26,7 @@
 
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".SplashScreenActivity"
             android:label="@string/activity_name_detection"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -36,6 +36,7 @@
         </activity>
         <activity android:name=".DetectorActivity"></activity>
         <activity android:name=".GoogleVision"></activity>
+        <activity android:name=".HomeActivity"></activity>
 
     </application>
 </manifest>

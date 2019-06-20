@@ -4,6 +4,7 @@ package org.tensorflow.lite.examples.detection;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -77,6 +78,10 @@ public class GoogleVision extends AppCompatActivity {
                     .setNegativeButton(R.string.dialog_select_camera, (dialog, which) -> startCamera());
             builder.create().show();
         });
+
+        TextView textView = (TextView) findViewById(R.id.image_details);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/TTT-Tusj.ttf");
+        textView.setTypeface(typeface);
 
         mImageDetails = findViewById(R.id.image_details);
         mMainImage = findViewById(R.id.main_image);

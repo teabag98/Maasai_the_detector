@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/background"
     >
 
     <Button
@@ -14,7 +14,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="520dp"
         android:background="@drawable/button_bg_round"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTint="#0EB2AA"
         android:padding="10dp"
         android:text="upload to scan"
         android:textColor="#ffffff" />
@@ -30,7 +30,7 @@
         android:layout_marginEnd="45dp"
         android:layout_toEndOf="@+id/uploadButton"
         android:background="@drawable/button_bg_round"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTint="#42f4b9"
         android:padding="10dp"
         android:text="detect"
         android:textColor="#ffffff" />
